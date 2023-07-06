@@ -1,0 +1,47 @@
+.front {
+  position: relative;
+  padding: 20px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center];
+  align-content: center;
+  -webkit-box-pack: center;
+  background-image: url("../../../public/rotating-card-bg-front.jpeg");
+  background-size: cover;
+  background-position: center;
+  border-radius: 1rem;
+  min-height: 61vh;
+  max-width: 85%;
+  font-weight: 250;
+}
+
+.back {
+    position: relative;
+    padding: 20px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    -webkit-box-pack: center;
+    background-image: url("../../../public/rotating-card-bg-back.jpeg");
+    background-size: cover;
+    background-position: center;
+    border-radius: 1rem;
+    min-height: 61vh;
+    max-width: 85%;
+    font-weight: 300;
+  }
+  @media screen and (min-width: 1440px) {
+    .front {
+      height: 31vh;
+      max-width: 93%;
+      color: white;
+    }
+    .back {
+        height: 31vh;
+        max-width: 90%;
+        color: white;
+      }
+  }
