@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import CardFlip from "react-card-flip";
 import TouchAppIcon from "@mui/icons-material/TouchApp";
 import { Button, Typography } from "@mui/material";
-import { Scale } from "@mui/icons-material";
 import "./FlipCard.css"
 
 const FlipCard = () => {

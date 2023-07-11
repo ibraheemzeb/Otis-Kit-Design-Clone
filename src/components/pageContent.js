@@ -13,6 +13,8 @@ import ComplexDocSec from "./ComplexDocSec";
 import CardGridSection from "./cards/CardGridSection";
 import ReviewSec from "./ReviewSec";
 import PricingSec from "./PricingSec";
+import ThankSec from "./ThankSec";
+import Footer from "./Footer";
 
 const PageContent = () => {
   return (
@@ -44,6 +46,8 @@ const PageContent = () => {
       <CardGridSection />
       <ReviewSec/>
       <PricingSec/>
+      <ThankSec/>
+      <Footer/>
     </Box>
     // </Box>
   );
