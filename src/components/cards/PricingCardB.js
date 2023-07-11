@@ -7,8 +7,8 @@ const PricingCard = ({ heading, text, price }) => {
   return (
     <Box
       sx={{
-        background: "white",
-        color: "rgb(52, 71, 103)",
+        background: "linear-gradient(195deg, rgb(66, 66, 74), rgb(25, 25, 25))",
+        color: "White",
         borderRadius: "0.75rem",
         padding: "8%",
       }}
@@ -28,7 +28,7 @@ const PricingCard = ({ heading, text, price }) => {
       <Typography
         gutterBottom
         component="div"
-        color="text.secondary"
+        // color="text.secondary"
         sx={{
           fontSize: "1.35rem",
           fontWeight: "520",
@@ -74,8 +74,9 @@ const PricingCard = ({ heading, text, price }) => {
           width: "95%",
           padding: "2% 5% 2% 5%",
           margin: "10px",
+          color:"black",
           background:
-            "linear-gradient(195deg, rgb(66, 66, 74), rgb(25, 25, 25))",
+            "white",
           backgroundSize: "200% auto",
           transition: "background-position 0.5s",
           "&:hover": {
@@ -92,41 +93,41 @@ const PricingCard = ({ heading, text, price }) => {
       >
         BUY NOW
       </Button>
-      <Divider sx={{ marginTop:"10%"}}  />
+      <Divider sx={{ marginTop:"10%", color:"white"}}  />
 
       <div style={{ display: 'flex', padding:"1%" }}>
         <div style={{ flex: 1,  marginTop:"10%" }}>
-          <Typography color="text.secondary" variant="h6"><CheckIcon sx={{ marginRight: '0.8em' }}/>Complete Code</Typography>
+          <Typography  variant="h6"><CheckIcon sx={{ marginRight: '0.8em' }}/>Complete Code</Typography>
           
         </div>
       </div>
       <div style={{ display: 'flex', marginTop:"10%" }}>
         <div style={{ flex: 1 }}>
-          <Typography color="text.secondary" variant="h6"><CheckIcon sx={{ marginRight: '0.8em' }}/>Full Documentation</Typography>
+          <Typography  variant="h6"><CheckIcon sx={{ marginRight: '0.8em' }}/>Full Documentation</Typography>
           
         </div>
       </div>
       <div style={{ display: 'flex', marginTop:"10%" }}>
         <div style={{ flex: 1 }}>
-          <Typography color="text.secondary" variant="h6"><CheckIcon sx={{ marginRight: '0.8em' }}/>Projects-1</Typography>
+          <Typography  variant="h6"><CheckIcon sx={{ marginRight: '0.8em' }}/>Projects-1</Typography>
           
         </div>
       </div>
       <div style={{ display: 'flex', marginTop:"10%" }}>
         <div style={{ flex: 1 }}>
-          <Typography color="text.secondary" variant="h6"><CheckIcon sx={{ marginRight: '0.8em' }}/>Team Size-1</Typography>
+          <Typography  variant="h6"><CheckIcon sx={{ marginRight: '0.8em' }}/>Team Size-1</Typography>
           
         </div>
       </div>
       <div style={{ display: 'flex', marginTop:"10%" }}>
         <div style={{ flex: 1 }}>
-          <Typography color="text.secondary" variant="h6"><CheckIcon sx={{ marginRight: '0.8em' }}/>Support</Typography>
+          <Typography  variant="h6"><CheckIcon sx={{ marginRight: '0.8em' }}/>Support</Typography>
           
         </div>
       </div>
       <div style={{ display: 'flex', marginTop:"10%" }}>
         <div style={{ flex: 1 }}>
-          <Typography color="text.secondary" variant="h6"><CheckIcon sx={{ marginRight: '0.8em' }}/>Free Updates- 6months</Typography>
+          <Typography  variant="h6"><CheckIcon sx={{ marginRight: '0.8em' }}/>Free Updates- 6months</Typography>
           
         </div>
       </div>
