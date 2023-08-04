@@ -9,6 +9,8 @@ import YouTubeIcon from "@mui/icons-material/YouTube";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemText from "@mui/material/ListItemText";
+// import { spacing } from '@mui/system';
+
 
 const Footer = () => {
   return (
@@ -16,7 +18,7 @@ const Footer = () => {
       <footer>
         <Grid
           container
-          sx={{ backgroundColor: "rgb(240, 242, 245)", padding: "2rem" }}
+          sx={{ backgroundColor: "rgb(240, 242, 245)", padding: "2rem", color:"rgb(52, 71, 103)" }}
         >
           <Grid item xs={12} sm={4}>
             {/* First Column */}
@@ -61,16 +63,21 @@ const Footer = () => {
               <Grid item>
                 <Typography variant="body1">
                   <List>
-                    <ListItem>
-                      <ListItemText primary="Item 1" />
+                    <ListItem sx={{p: 0}}>
+                      <ListItemText primary="About Us" />
                     </ListItem>
-                    <ListItem>
-                      <ListItemText primary="Item 2" />
+                    <ListItem sx={{p: 0}}>
+                      <ListItemText primary="Freebies" />
                     </ListItem>
-                    <ListItem>
-                      <ListItemText primary="Item 3" />
+                    <ListItem sx={{p: 0}}>
+                      <ListItemText primary="Premium" />
                     </ListItem>
-                    {/* Add more ListItems as needed */}
+                    <ListItem sx={{p: 0}}>
+                      <ListItemText primary="Tools" />
+                    </ListItem>
+                    <ListItem sx={{p: 0}}>
+                      <ListItemText primary="Blog" />
+                    </ListItem>
                   </List>
                 </Typography>
               </Grid>
@@ -91,7 +98,20 @@ const Footer = () => {
               </Grid>
               <Grid item>
                 <Typography variant="body1">
-                  {/* List items go here */}
+                <List>
+                    <ListItem sx={{p: 0}}>
+                      <ListItemText primary="Illustrations" />
+                    </ListItem>
+                    <ListItem sx={{p: 0}}>
+                      <ListItemText primary="Bits & Snippets" />
+                    </ListItem >
+                    <ListItem sx={{p: 0}}>
+                      <ListItemText primary="Affiliate" />
+                    </ListItem>
+                    <ListItem sx={{p: 0}}>
+                      <ListItemText primary="Program" />
+                    </ListItem>
+                  </List>
                 </Typography>
               </Grid>
             </Grid>
@@ -111,7 +131,26 @@ const Footer = () => {
               </Grid>
               <Grid item>
                 <Typography variant="body1">
-                  {/* List items go here */}
+                <List >
+                    <ListItem sx={{p: 0}}>
+                      <ListItemText primary="Contact Us"  />
+                    </ListItem>
+                    <ListItem sx={{p: 0}}>
+                      <ListItemText primary="Knowledge" />
+                    </ListItem>
+                    <ListItem sx={{p: 0}}>
+                      <ListItemText primary="Center" />
+                    </ListItem>
+                    <ListItem sx={{p: 0}}>
+                      <ListItemText primary="Custom" />
+                    </ListItem>
+                    <ListItem sx={{p: 0}}>
+                      <ListItemText primary="Development" />
+                    </ListItem>
+                    <ListItem sx={{p: 0}}>
+                      <ListItemText primary="Sponsorships" />
+                    </ListItem >
+                  </List>
                 </Typography>
               </Grid>
             </Grid>
@@ -131,7 +170,20 @@ const Footer = () => {
               </Grid>
               <Grid item>
                 <Typography variant="body1">
-                  {/* List items go here */}
+                <List>
+                    <ListItem sx={{p: 0}}>
+                      <ListItemText primary="Terms & Conditions" />
+                    </ListItem>
+                    <ListItem sx={{p: 0}}>
+                      <ListItemText primary="Privacy Policy" />
+                    </ListItem>
+                    <ListItem sx={{p: 0}}>
+                      <ListItemText primary="Licenses" />
+                    </ListItem>
+                    <ListItem sx={{p: 0}}>
+                      <ListItemText primary="(EULA)" />
+                    </ListItem>
+                  </List>
                 </Typography>
               </Grid>
             </Grid>

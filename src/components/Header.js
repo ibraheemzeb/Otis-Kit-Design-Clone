@@ -1,4 +1,4 @@
-import * as React from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
@@ -17,8 +17,14 @@ import DashboardIcon from "@mui/icons-material/Dashboard";
 import ContactsIcon from "@mui/icons-material/Contacts";
 import ViewDayIcon from "@mui/icons-material/ViewDay";
 import ArticleIcon from "@mui/icons-material/Article";
-
+import Tooltip from "@mui/material/Tooltip";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
+import PagesTTC from "./PagesTTC";
+import AccountTTC from "./AccountTTC";
+import SectionsTTC from "./SectionsTTC";
+import DocsTTC from "./DocsTTC";
+// import { withStyles } from "@mui/styles";
+import { makeStyles } from "@mui/styles";
 
 const drawerWidth = 240;
 const navItems = [
@@ -44,9 +50,23 @@ const navItems = [
   },
 ];
 
+const useStyles = makeStyles((theme) => ({
+  customTooltip: {
+    padding: "1% !important",
+    maxWidth: "none !important",
+    backgroundColor: "white !important",
+    borderRadius: "1em !important",
+    top: "1em !important",
+  },
+  ".MuiTooltip-arrow": {
+    backgroundColor: "white !important",
+  },
+}));
+
 function Header(props) {
   const { window } = props;
-  const [mobileOpen, setMobileOpen] = React.useState(false);
+  const classes = useStyles();
+  const [mobileOpen, setMobileOpen] = useState(false);
 
   const handleDrawerToggle = () => {
     setMobileOpen((prevState) => !prevState);
@@ -87,7 +107,6 @@ function Header(props) {
           justifyContent: "center",
           width: "83.61%",
           maxWidth: "1700px",
-          // position: "absolute",
           left: "50%",
           top: "2.25%",
           transform: "translateX(-50%)",
@@ -105,7 +124,6 @@ function Header(props) {
               fontSize: "1.1rem",
               fontFamily: "Roboto, Helvetica, Arial, sans-serif",
               letterSpacing: "0",
-              // lineHeight: "1.5",
               display: { xs: "block", sm: "block" },
             }}
           >
@@ -117,29 +135,48 @@ function Header(props) {
             }}
           >
             {navItems.map((item) => (
-              <Button
+              <Tooltip
+                arrow
+                placement={item.name === "Docs" ? "bottom-end" : "bottom-start"}
+                classes={{ tooltip: classes.customTooltip }}
+                // classes={{ tooltip: `${classes.customTooltip} ${css-0}` }}
                 key={item.name}
-                sx={{
-                  background: "transparent",
-                  color: "#344767",
-                  margin: "0px 8px",
-                  opacity: "0.6",
-                  fontWeight: "400",
-                  textTransform: "none",
-                  fontSize: "5.575rem",
-                  letterSpacing: "0",
-                }}
+                title={
+                  item.name === "Pages" ? (
+                    <PagesTTC />
+                  ) : item.name === "Account" ? (
+                    <AccountTTC />
+                  ) : item.name === "Sections" ? (
+                    <SectionsTTC />
+                  ) : item.name === "Docs" ? (
+                    <DocsTTC />
+                  ) : null
+                }
               >
-                <Box sx={{ margin: "0px 2px 0px 8px", fontSize: "16px" }}>
-                  {item.icon}
-                </Box>
-                <Box sx={{ margin: "0px 2px 8px 8px", fontSize: "16px" }}>
-                  {item.name}
-                </Box>
-                <Box sx={{ margin: "0px 2px 0px 0px", fontSize: "16px" }}>
-                  {item.icon1}
-                </Box>
-              </Button>
+                <Button
+                  key={item.name}
+                  sx={{
+                    background: "transparent",
+                    color: "#344767",
+                    margin: "0px 8px",
+                    opacity: "0.6",
+                    fontWeight: "400",
+                    textTransform: "none",
+                    fontSize: "5.575rem",
+                    letterSpacing: "0",
+                  }}
+                >
+                  <Box sx={{ margin: "0px 2px 0px 8px", fontSize: "16px" }}>
+                    {item.icon}
+                  </Box>
+                  <Box sx={{ margin: "0px 2px 8px 8px", fontSize: "16px" }}>
+                    {item.name}
+                  </Box>
+                  <Box sx={{ margin: "0px 2px 0px 0px", fontSize: "16px" }}>
+                    {item.icon1}
+                  </Box>
+                </Button>
+              </Tooltip>
             ))}
           </Box>
           <Button
@@ -193,7 +230,7 @@ function Header(props) {
           open={mobileOpen}
           onClose={handleDrawerToggle}
           ModalProps={{
-            keepMounted: true, // Better open performance on mobile.
+            keepMounted: true,
           }}
           sx={{
             display: { xs: "block", sm: "block", md: "block" },
@@ -211,11 +248,8 @@ function Header(props) {
 }
 
 Header.propTypes = {
-  /**
-   * Injected by the documentation to work in an iframe.
-   * You won't need it on your project.
-   */
   window: PropTypes.func,
+  classes: PropTypes.object.isRequired,
 };
 
 export default Header;
