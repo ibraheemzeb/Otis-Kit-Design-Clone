@@ -1,6 +1,6 @@
 import React from "react";
-import { Grid, Box, Typography, Button } from "@mui/material";
-import Divider from "@mui/material/Divider";
+import { Grid, Box, Typography,  } from "@mui/material";
+// import Divider from "@mui/material/Divider";
 import PricingCard from "./cards/PricingCard";
 import PricingCardB from "./cards/PricingCardB";
 import LockIcon from "@mui/icons-material/Lock";

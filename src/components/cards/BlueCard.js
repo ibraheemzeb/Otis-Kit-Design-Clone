@@ -1,10 +1,10 @@
 import * as React from "react";
-import Card from "@mui/material/Card";
-import CardContent from "@mui/material/CardContent";
+// import Card from "@mui/material/Card";
+// import CardContent from "@mui/material/CardContent";
 // import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
-import { Button, CardActionArea, CardActions, Box } from "@mui/material";
-import FlagRoundedIcon from "@mui/icons-material/FlagRounded";
+import {  Box } from "@mui/material";
+// import FlagRoundedIcon from "@mui/icons-material/FlagRounded";
 import ArrowForwardRoundedIcon from "@mui/icons-material/ArrowForwardRounded";
 
 export default function MultiActionAreaCard({ icon, heading, text, btext }) {
@@ -39,11 +39,7 @@ export default function MultiActionAreaCard({ icon, heading, text, btext }) {
         <Box sx={{ marginRight: "0.5rem" }}>{icon}</Box>
         {heading}
       </Typography>
-      <Typography
-        variant="body2"
-        
-        sx={{ fontSize: "1.45em" }}
-      >
+      <Typography variant="body2" sx={{ fontSize: "1.45em" }}>
         {text}
       </Typography>
       {/* </CardContent> */}

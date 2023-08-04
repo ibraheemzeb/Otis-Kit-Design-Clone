@@ -5,7 +5,7 @@ import CssBaseline from "@mui/material/CssBaseline";
 import Header from "./components/Header";
 import HeroSection from "./components/heroSection";
 import PageContent from "./components/pageContent";
-import Footer from "./components/Footer";
+// import Footer from "./components/Footer";
 
 function App() {
   return (

@@ -31,6 +31,7 @@ const PageContent = () => {
         padding: "5%",
         background: "rgba(255,255,255,0.8)",
         backdropFilter: "saturate(200%) blur(30px)",
+        boxShadow:"rgba(0, 0, 0, 0.05) 0rem 1.25rem 1.6875rem 0rem"
       }}
     >
       <CounterCardSection />
